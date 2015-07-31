@@ -1,0 +1,36 @@
+== slim :layout
+  section
+    h1 アカウント間違えましたボタン
+    p
+      a {
+        href="https://twitter.com/share"
+        class="twitter-share-button"
+        data-text="#{tweet}"
+        data-size="large"
+      } Tweet
+
+    javascript:
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+    p ※更新するたびに内容が変わります。
+
+  footer
+    p
+      strong オーセンティケーションフリー！
+      br
+      | このアプリはTwitter認証を利用していないので、あなたの予想に反する挙動は起こしません。
+      br
+      | 安心して
+      ruby
+        rb aoitakuになろう
+        rp （
+        rt アカウントを間違えよう
+        rp ）
+      |！
+    p
+      | 本人：
+      a href="https://twitter.com/aoitaku" @aoitaku
+      br
+      | special thanks：
+      a href="http://vivitjcninareru.herokuapp.com" vivit_jcになれるボタン
+

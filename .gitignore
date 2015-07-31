@@ -1,0 +1,11 @@
+/vendor/bundle/*
+/.bundle/*
+/tmp/*
+/tmp/pids/*
+/tmp/sock/*
+/log/*
+!/tmp/pids/
+!/tmp/sock/
+!.gitkeep
+config.yml
+data/
