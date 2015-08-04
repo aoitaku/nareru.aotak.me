@@ -4,8 +4,8 @@
 /tmp/pids/*
 /tmp/sock/*
 /log/*
+/data/*
 !/tmp/pids/
 !/tmp/sock/
 !.gitkeep
 config.yml
-data/
