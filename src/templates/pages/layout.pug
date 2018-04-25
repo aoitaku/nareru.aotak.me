@@ -1,0 +1,24 @@
+doctype html
+block variables
+  - var title = "アカウント間違えました™ボタン"
+  - var author = "蒼井拓"
+
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title= title
+    meta(name="author", content=`${author}`)
+    meta(name="viewport", content="initial-scale=1.0")
+    block style
+    block script
+  body
+    div(role="main")
+      section
+        h1
+          | アカウント間違えました
+          small(title="※これはジョークです")
+            sup ™
+          | ボタン
+        block body
+      footer
+        block footer
