@@ -1,0 +1,44 @@
+extends ../templates/pages/layout.pug
+
+append variables
+  - var tweet = "アカウント間違えました"
+
+block style
+  style !{require("../templates/styles/index.sass?inline")}
+
+block script
+  script
+    include:typescript ../templates/scripts/tweet-button.ts
+
+block body
+  p#tweet-button-placeholder.container.loading
+
+  p
+    | ※更新するたびに内容が変わります。
+  p.container.loading
+    button#reload-button リロード
+
+  include ../templates/mixins/tweets.pug
+  +tweets
+
+block footer
+  p
+    strong オーセンティケーションフリー！
+    br
+    | このアプリはTwitter認証を利用していないので、あなたの予想に反する挙動は起こしません。
+  p
+    | 安心して
+    ruby
+      rb &ensp;aoitaku&ensp;になろう
+      rp （
+      rt アカウントを間違えよう
+      rp ）
+    |！
+  dl.credit
+    dt 本人
+    dd
+      a(href="https://twitter.com/aoitaku") @aoitaku
+    dt special thanks
+    dd
+      a(href="http://vivitjcninareru.herokuapp.com") vivit_jcになれるボタン
+
