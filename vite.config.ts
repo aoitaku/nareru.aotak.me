@@ -6,14 +6,17 @@ import input from '@macropygia/vite-plugin-glob-input'
 export default defineConfig({
   root: 'src',
   build: {
-    outDir: path.resolve(__dirname, 'dist'),
+    rollupOptions: {
+      input: 'src/index.pug',
+    },
+    outDir: path.resolve(__dirname, 'public'),
   },
   plugins: [
+    pug(),
     input({
       patterns: [
         'src/public/**/*.pug',
       ],
     }),
-    pug(),
   ],
 })

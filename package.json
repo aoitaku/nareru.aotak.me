@@ -15,8 +15,8 @@
   "devDependencies": {
     "@macropygia/vite-plugin-glob-input": "^0.0.15",
     "@macropygia/vite-plugin-pug-static": "^0.0.17",
-    "pug": "^3.0.2",
     "sass": "^1.55.0",
+    "twitter-api-sdk": "^1.2.1",
     "typescript": "^4.8.4",
     "vite": "^3.2.0"
   },
