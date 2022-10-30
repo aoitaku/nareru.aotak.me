@@ -1,4 +1,4 @@
-(function(){
+export default (function(){
   const api = '/data/tweets.json'
   const store: { tweetButtonContainer?: HTMLIFrameElement, tweets: string[] } = {
     tweets: []
@@ -28,7 +28,6 @@
   function createTweetButtonInjector () {
     const script = document.createElement('script')
     script.src = 'https://platform.twitter.com/widgets.js'
-    script.charset = 'utf-8'
     script.async = true
     return script
   }
@@ -87,7 +86,7 @@
 
   function watchTweetButtonLoading (records: MutationRecord[], observer: MutationObserver, onLoaded: (element: HTMLIFrameElement) => void) {
     const loaded = records.some((record) => {
-      const element = findTweetButton(Array.apply(null, record.addedNodes))
+      const element = findTweetButton(Array.from(record.addedNodes))
       if (element) {
         onLoaded(element as HTMLIFrameElement)
         return true
