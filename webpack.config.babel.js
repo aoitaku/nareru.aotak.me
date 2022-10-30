@@ -3,7 +3,6 @@ import glob from 'glob'
 import webpack from 'webpack'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import nodeExternals from 'webpack-node-externals'
 const srcPath = path.resolve(__dirname, './src')
 const distPath = path.resolve(__dirname, './public')
 const publicSrcPath = path.join(srcPath, 'public')
